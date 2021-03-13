@@ -1,0 +1,22 @@
+{
+  "name": "trivia_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ehawk82/Trivia_JS.git"
+  },
+  "author": "Jason Graziano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ehawk82/Trivia_JS/issues"
+  },
+  "homepage": "https://github.com/Ehawk82/Trivia_JS#readme"
+}
