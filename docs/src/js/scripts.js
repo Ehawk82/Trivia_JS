@@ -1,10 +1,23 @@
-let current_question = 0;
+var triviaLogTemplate = {
+  current_question: 0,
+  legend: {},
+  id: null,
+  pass: 0,
+  fail: 0,
+  completed: 0
+};
 
 const init = () => {
-	buildPage();
+  var tl = parseLS("triviaLog");
+  if (!tl || tl === null) {
+    LSinit("triviaLog",triviaLogTemplate);
+  }
+  buildPage();
 };
 
 const buildPage = () => {
+  var tl = parseLS("triviaLog");
+
   const container = createEle("div"),
         box = createEle("div"),
         q = createEle("p"),
@@ -13,19 +26,19 @@ const buildPage = () => {
         a3 = createEle("button"),
         a4 = createEle("button");
 
-  a1.innerHTML = stuff_one[current_question].A;
-  a1.onclick = runAnswer("A");
+  a1.innerHTML = "A: " + stuff_one[tl.current_question].A;
+  a1.onclick = runAnswer("A",container);
 
-  a2.innerHTML = stuff_one[current_question].B;
-  a2.onclick = runAnswer("B");
+  a2.innerHTML = "B: " + stuff_one[tl.current_question].B;
+  a2.onclick = runAnswer("B",container);
 
-  a3.innerHTML = stuff_one[current_question].C;
-  a3.onclick = runAnswer("C");
+  a3.innerHTML = "C: " + stuff_one[tl.current_question].C;
+  a3.onclick = runAnswer("C",container);
 
-  a4.innerHTML = stuff_one[current_question].D;
-  a4.onclick = runAnswer("D");
+  a4.innerHTML = "D: " + stuff_one[tl.current_question].D;
+  a4.onclick = runAnswer("D",container);
 
-  box.innerHTML = stuff_one[current_question].question;
+  box.innerHTML = (tl.current_question + 1) + ". " + stuff_one[tl.current_question].question;
 
   box.append(q,a1,a2,a3,a4);
 
@@ -34,13 +47,26 @@ const buildPage = () => {
   body.append(container);
 };
 
-const runAnswer = x => {
+const runAnswer = (x,c) => {
   return () => {
-    if(x === stuff_one[current_question].answer) {
+    var tl = parseLS("triviaLog");
+    c.innerHTML = "";
+    
+    if(x === stuff_one[tl.current_question].answer) {
       console.log("got it right!");
+      tl.pass++;
     } else {
       console.log("wrong!");
+      tl.fail++;
     }
+    tl.current_question = tl.current_question + 1;
+    tl.legend[tl.current_question] = x;
+    tl.completed++;
+
+
+    saveLS("triviaLog", tl);
+
+    buildPage();
   }
 };
 
