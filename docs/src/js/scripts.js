@@ -57,9 +57,14 @@ const buildPage = () => {
         scoreTracker = createEle("div"),
         passes = createEle("span"),
         fails = createEle("span"),
-        completions = createEle("span");
+        completions = createEle("span"),
+        average = createEle("span");
 
-  completions.innerHTML = " | completions: " + tl.completed + " |";
+  var avg = (tl.pass / (tl.pass + tl.fail)) * 100;
+
+  average.innerHTML = " | average: " + avg + "% |"
+
+  completions.innerHTML = " | completions: " + tl.completed;
 
   passes.innerHTML = " | pass: " + tl.pass;
 
@@ -91,10 +96,13 @@ if(stuffs[tl.current_question]){
     box.append("done! ",nxtBtn);
     tl.completed++;
     tl.current_question = 0;
-    scoreTracker.innerHTML = "SCORE TRACKER: ";
-    scoreTracker.append(passes,fails,completions);
+    
     saveLS("triviaLog",tl);
   }
+
+  scoreTracker.innerHTML = "SCORE TRACKER: ";
+  scoreTracker.append(passes,fails,completions,average);
+
   container.append(box,scoreTracker);
 
   body.append(container);
