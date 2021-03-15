@@ -2685,6 +2685,13 @@ stuff_20 = [{
   "D": "8:00 a.m.",
   "answer": "A"
 }, {
+  "question": "With what would you use a wah-wah pedal?",
+  "A": "bicycle",
+  "B": "stock car",
+  "C": "electric guitar",
+  "D": "baby",
+  "answer": "C"
+}, {
   "question": "Where are fireworks first known to have been developed?",
   "A": "Italy",
   "B": "China",
@@ -3656,13 +3663,6 @@ stuff_26 = [{
   "C": "St. Francis of Assisi",
   "D": "St. Joan of Arc",
   "answer": "C"
-}, {
-  "question": "Who is the shortest man to ever win an NBA slam dunk competition?",
-  "A": "Anthony 'Spud' Webb",
-  "B": "Michael 'Air' Jordan",
-  "C": "Tyrone 'Muggsy' Bogues",
-  "D": "Julius 'Dr. J' Erving",
-  "answer": "A"
 }],
 stuff_27 = [{
   "question": "Who is the star of the movie 'Casablanca'?",

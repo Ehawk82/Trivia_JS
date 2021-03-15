@@ -1,6 +1,34 @@
 var triviaLogTemplate = {
   current_question: 0,
-  legend: {},
+  legend: {
+    1:"",
+    2:"",
+    3:"",
+    4:"",
+    5:"",
+    6:"",
+    7:"",
+    8:"",
+    9:"",
+    10:"",
+    11:"",
+    12:"",
+    13:"",
+    14:"",
+    15:"",
+    16:"",
+    17:"",
+    18:"",
+    19:"",
+    20:"",
+    21:"",
+    22:"",
+    23:"",
+    24:"",
+    25:"",
+    26:"",
+    27:"",
+  },
   id: null,
   pass: 0,
   fail: 0,
@@ -78,14 +106,15 @@ const runAnswer = (x,c,stuffs) => {
     c.innerHTML = "";
     
     if(x === stuffs[tl.current_question].answer) {
-      console.log("got it right!");
+
       tl.pass++;
     } else {
-      console.log("wrong!");
+
       tl.fail++;
     }
     tl.current_question = tl.current_question + 1;
-    tl.legend[tl.current_question] = x;
+
+    tl.legend[tl.completed] += x;
 
 
     saveLS("triviaLog", tl);
