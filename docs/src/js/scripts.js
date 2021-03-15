@@ -60,9 +60,15 @@ const buildPage = () => {
         completions = createEle("span"),
         average = createEle("span");
 
-  var avg = (tl.pass / (tl.pass + tl.fail)) * 100;
+  var avg = ((tl.pass / (tl.pass + tl.fail)) * 100).toFixed(2),result;
 
-  average.innerHTML = " | average: " + avg + "% |"
+  if(isNaN(avg)) {
+     result = "0%";
+  } else {
+     result = avg + "%";
+  }
+
+  average.innerHTML = " | average: " + result + " |"
 
   completions.innerHTML = " | completions: " + tl.completed;
 
