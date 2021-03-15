@@ -1,4 +1,4 @@
-var stuff_one = [{
+var stuff_1 = [{
   "question": "A flashing red traffic light signifies that a driver should do what?",
   "A": "stop",
   "B": "speed up",
@@ -131,14 +131,15 @@ var stuff_one = [{
   "C": "as the Romans do",
   "D": "don't drink the water",
   "answer": "C"
-}, {
+},{
   "question": "According to the proverb, necessity is the mother of what?",
   "A": "Invention",
   "B": "Luck",
   "C": "Problems",
   "D": "Procrastination",
   "answer": "A"
-}, {
+}],
+stuff_2 = [ {
   "question": "According to the title of a popular children's TV show, what color is Bear's big house?",
   "A": "red",
   "B": "green",
@@ -278,7 +279,8 @@ var stuff_one = [{
   "C": "bone",
   "D": "calcium",
   "answer": "B"
-}, {
+}],
+stuff_3 = [{
   "question": "Excluding wisdom teeth, how many adult teeth do humans have?",
   "A": "28",
   "B": "32",
@@ -418,7 +420,8 @@ var stuff_one = [{
   "C": "nine",
   "D": "ten",
   "answer": "C"
-}, {
+}],
+stuff_4 = [{
   "question": "How many keys are on a standard piano?",
   "A": "20",
   "B": "54",
@@ -558,7 +561,8 @@ var stuff_one = [{
   "C": "hadephobia",
   "D": "nyctophobia",
   "answer": "D"
-}, {
+}],
+stuff_5 = [{
   "question": "If you are watching a Shavian play, who is the author?",
   "A": "Shakespeare",
   "B": "Aeschylus",
@@ -698,7 +702,8 @@ var stuff_one = [{
   "C": "gravy",
   "D": "whipped cream",
   "answer": "A"
-}, {
+}],
+stuff_6 = [{
   "question": "In golf, what is one stroke over par called?",
   "A": "eagle",
   "B": "bogey",
@@ -838,7 +843,8 @@ var stuff_one = [{
   "C": "his car keys",
   "D": "the bartender",
   "answer": "B"
-}, {
+}],
+stuff_7 = [{
   "question": "In the movie 'Austin Powers: The Spy Who Shagged Me' what is the name of Dr. Evil's diminitive clone?",
   "A": "Little Buddy",
   "B": "Mini-Me",
@@ -978,7 +984,8 @@ var stuff_one = [{
   "C": "Burger King",
   "D": "Hardee's",
   "answer": "A"
-}, {
+}],
+stuff_8 = [{
   "question": "In what sport do athletes compete for the Walker Cup?",
   "A": "cricket",
   "B": "tennis",
@@ -1118,7 +1125,8 @@ var stuff_one = [{
   "C": "neurologist",
   "D": "proctologist",
   "answer": "D"
-}, {
+}],
+stuff_9 = [{
   "question": "On Valentine's Day 2000, NASA's NEAR spacecraft began a yearlong orbit of what asteroid?",
   "A": "Eros",
   "B": "Cupid",
@@ -1258,7 +1266,8 @@ var stuff_one = [{
   "C": "'Jack Be Nimble'",
   "D": "'Home, Sweet Home'",
   "answer": "B"
-}, {
+}],
+stuff_10 = [{
   "question": "The majority of calcium in the human body is found where?",
   "A": "hair",
   "B": "blood",
@@ -1398,7 +1407,8 @@ var stuff_one = [{
   "C": "slip cases",
   "D": "wafer boxes",
   "answer": "B"
-}, {
+}],
+stuff_11 = [{
   "question": "What are the Smothers Brothers' first names?",
   "A": "Frank and Bill",
   "B": "Tom and Dick",
@@ -1538,7 +1548,8 @@ var stuff_one = [{
   "C": "clear",
   "D": "green",
   "answer": "A"
-}, {
+}],
+stuff_12 = [{
   "question": "What company makes Oreo cookies?",
   "A": "General Mills",
   "B": "Nabisco",
@@ -1678,7 +1689,8 @@ var stuff_one = [{
   "C": "red entertainment machine",
   "D": "really energetic music",
   "answer": "B"
-}, {
+}],
+stuff_13 = [{
   "question": "What does the Latin phrase 'e pluribus unum' mean?",
   "A": "What a crazy life.",
   "B": "In God we trust.",
@@ -1818,7 +1830,8 @@ var stuff_one = [{
   "C": "cantaloupe",
   "D": "oasis",
   "answer": "B"
-}, {
+}],
+stuff_14 = [{
   "question": "What is another way of writing 'six feet'?",
   "A": "6'",
   "B": "6",
@@ -1958,7 +1971,8 @@ var stuff_one = [{
   "C": "Ruth",
   "D": "John",
   "answer": "A"
-}, {
+}],
+stuff_15 = [{
   "question": "What is the last letter of the Greek alphabet?",
   "A": "omicron",
   "B": "omega",
@@ -2098,7 +2112,8 @@ var stuff_one = [{
   "C": "platypus",
   "D": "alligator",
   "answer": "B"
-}, {
+}],
+stuff_16 = [{
   "question": "What is the nickname of Florida's controversial death row electric chair?",
   "A": "Old Yeller",
   "B": "Old Geezer",
@@ -2238,7 +2253,8 @@ var stuff_one = [{
   "C": "Corvette",
   "D": "Trans Am",
   "answer": "D"
-}, {
+}],
+stuff_17 = [{
   "question": "What kind of flying contraption is featured in the movie 'Chitty Chitty Bang Bang'?",
   "A": "boat",
   "B": "car",
@@ -2378,7 +2394,8 @@ var stuff_one = [{
   "C": "Lincoln Logs",
   "D": "Lite Brite",
   "answer": "B"
-}, {
+}],
+stuff_18 = [{
   "question": "What pro wrestler grapples with Sylvester Stallone in the movie 'Rocky III'?",
   "A": "Dolph Lundgren",
   "B": "Hulk Hogan",
@@ -2518,7 +2535,8 @@ var stuff_one = [{
   "C": "wood",
   "D": "glass",
   "answer": "B"
-}, {
+}],
+stuff_19 = [{
   "question": "What U.S. president is mentioned by name in the opening theme song of TV's 'All in the Family'?",
   "A": "Calvin Coolidge",
   "B": "Harry Truman",
@@ -2658,7 +2676,8 @@ var stuff_one = [{
   "C": "cars",
   "D": "clothes",
   "answer": "A"
-}, {
+}],
+stuff_20 = [{
   "question": "When it's noon in New York during daylight-saving time, what time is it in Honolulu?",
   "A": "6:00 a.m.",
   "B": "6:30 a.m.",
@@ -2791,7 +2810,8 @@ var stuff_one = [{
   "C": "lederhosen",
   "D": "sarong",
   "answer": "A"
-}, {
+}],
+stuff_21 = [{
   "question": "Which of the following beverages is brewed from the leaves of a plant?",
   "A": "tea",
   "B": "coffee",
@@ -2931,7 +2951,8 @@ var stuff_one = [{
   "C": "Reggie Bar",
   "D": "Butterfinger",
   "answer": "A"
-}, {
+}],
+stuff_22 = [{
   "question": "Which of these college football programs has produced the most Heisman Trophy winners?",
   "A": "Notre Dame",
   "B": "USC",
@@ -3071,7 +3092,8 @@ var stuff_one = [{
   "C": "dog",
   "D": "bird",
   "answer": "C"
-}, {
+}],
+stuff_23 = [{
   "question": "Which of these is a commonly-known investment account?",
   "A": "CNN",
   "B": "EMC",
@@ -3211,7 +3233,8 @@ var stuff_one = [{
   "C": "jalapeno",
   "D": "guajillo",
   "answer": "B"
-}, {
+}],
+stuff_24 = [{
   "question": "Which of these is not a type of primate?",
   "A": "baboon",
   "B": "marmot",
@@ -3351,7 +3374,8 @@ var stuff_one = [{
   "C": "CIA",
   "D": "FBI",
   "answer": "A"
-}, {
+}],
+stuff_25 = [{
   "question": "Which of these organs comes in a pair?",
   "A": "liver",
   "B": "kidney",
@@ -3491,7 +3515,8 @@ var stuff_one = [{
   "C": "'Joanie Loves Chachi'",
   "D": "'Laverne & Shirley'",
   "answer": "B"
-}, {
+}],
+stuff_26 = [{
   "question": "Which of these television series was not set in the United States?",
   "A": "'Picket Fences'",
   "B": "'M*A*S*H'",
@@ -3638,7 +3663,8 @@ var stuff_one = [{
   "C": "Tyrone 'Muggsy' Bogues",
   "D": "Julius 'Dr. J' Erving",
   "answer": "A"
-}, {
+}],
+stuff_27 = [{
   "question": "Who is the star of the movie 'Casablanca'?",
   "A": "Errol Flynn",
   "B": "Clark Gable",
@@ -3778,53 +3804,4 @@ var stuff_one = [{
   "C": "bank robbers",
   "D": "mobsters",
   "answer": "A"
-}, {
-  "question": "Who were the Know-Nothings?",
-  "A": "a '60's comedy troupe",
-  "B": "computer designers",
-  "C": "a political party",
-  "D": "a spy ring",
-  "answer": "C"
-}, {
-  "question": "Who wrote 'A Tale of Two Cities'?",
-  "A": "Charles Dickens",
-  "B": "Nathaniel Hawthorne",
-  "C": "Washington Irving",
-  "D": "Mark Twain",
-  "answer": "A"
-}, {
-  "question": "Who wrote musicals with Oscar Hammerstein II?",
-  "A": "Richard Rodgers",
-  "B": "Rogers Hornsby",
-  "C": "Gilbert O' Sullivan",
-  "D": "George Rogers Clark",
-  "answer": "A"
-}, {
-  "question": "Who wrote the lyrics of the Frank Sinatra anthem 'My Way'?",
-  "A": "Frank Sinatra",
-  "B": "Kris Krist offerson",
-  "C": "Carole King",
-  "D": "Paul Anka",
-  "answer": "D"
-}, {
-  "question": "Whom did Billie Jean King defeat in the famous 'Battle of the Sexes' tennis match?",
-  "A": "Jimmy Connors",
-  "B": "Pete Sampras",
-  "C": "John McEnroe",
-  "D": "Bobby Riggs",
-  "answer": "D"
-}, {
-  "question": "Whose profile can you see on the front of dimes that are currently in circulation?",
-  "A": "George Washington",
-  "B": "Thomas Jefferson",
-  "C": "Benjamin Franklin",
-  "D": "Franklin Roosevelt",
-  "answer": "D"
-}, {
-  "question": "With what would you use a wah-wah pedal?",
-  "A": "bicycle",
-  "B": "stock car",
-  "C": "electric guitar",
-  "D": "baby",
-  "answer": "C"
-}]
+}];

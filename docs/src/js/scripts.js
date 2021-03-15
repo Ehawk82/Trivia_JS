@@ -4,10 +4,11 @@ var triviaLogTemplate = {
   id: null,
   pass: 0,
   fail: 0,
-  completed: 0
+  completed: 1
 };
 
 const init = () => {
+  body.innerHTML = "";
   var tl = parseLS("triviaLog");
   if (!tl || tl === null) {
     LSinit("triviaLog",triviaLogTemplate);
@@ -24,35 +25,59 @@ const buildPage = () => {
         a1 = createEle("button"),
         a2 = createEle("button"),
         a3 = createEle("button"),
-        a4 = createEle("button");
+        a4 = createEle("button"),
+        scoreTracker = createEle("div"),
+        passes = createEle("span"),
+        fails = createEle("span"),
+        completions = createEle("span");
 
-  a1.innerHTML = "A: " + stuff_one[tl.current_question].A;
-  a1.onclick = runAnswer("A",container);
+  completions.innerHTML = " | completions: " + tl.completed + " |";
 
-  a2.innerHTML = "B: " + stuff_one[tl.current_question].B;
-  a2.onclick = runAnswer("B",container);
+  passes.innerHTML = " | pass: " + tl.pass;
 
-  a3.innerHTML = "C: " + stuff_one[tl.current_question].C;
-  a3.onclick = runAnswer("C",container);
+  fails.innerHTML = " | fail: " + tl.fail;
 
-  a4.innerHTML = "D: " + stuff_one[tl.current_question].D;
-  a4.onclick = runAnswer("D",container);
+  let stuffs = window["stuff_" + tl.completed];
 
-  box.innerHTML = (tl.current_question + 1) + ". " + stuff_one[tl.current_question].question;
+if(stuffs[tl.current_question]){
+  a1.innerHTML = "A: " + stuffs[tl.current_question].A;
+  a1.onclick = runAnswer("A",container,stuffs);
+
+  a2.innerHTML = "B: " + stuffs[tl.current_question].B;
+  a2.onclick = runAnswer("B",container,stuffs);
+
+  a3.innerHTML = "C: " + stuffs[tl.current_question].C;
+  a3.onclick = runAnswer("C",container,stuffs);
+
+  a4.innerHTML = "D: " + stuffs[tl.current_question].D;
+  a4.onclick = runAnswer("D",container,stuffs);
+
+  box.innerHTML = (tl.current_question + 1) + ". " + stuffs[tl.current_question].question;
 
   box.append(q,a1,a2,a3,a4);
 
-  container.append(box);
+  } else {
+    const nxtBtn = createEle("button");
+    nxtBtn.innerHTML = "NEXT QUIZ!";
+    nxtBtn.onclick = () => init();
+    box.append("done! ",nxtBtn);
+    tl.completed++;
+    tl.current_question = 0;
+    scoreTracker.innerHTML = "SCORE TRACKER: ";
+    scoreTracker.append(passes,fails,completions);
+    saveLS("triviaLog",tl);
+  }
+  container.append(box,scoreTracker);
 
   body.append(container);
 };
 
-const runAnswer = (x,c) => {
+const runAnswer = (x,c,stuffs) => {
   return () => {
     var tl = parseLS("triviaLog");
     c.innerHTML = "";
     
-    if(x === stuff_one[tl.current_question].answer) {
+    if(x === stuffs[tl.current_question].answer) {
       console.log("got it right!");
       tl.pass++;
     } else {
@@ -61,7 +86,6 @@ const runAnswer = (x,c) => {
     }
     tl.current_question = tl.current_question + 1;
     tl.legend[tl.current_question] = x;
-    tl.completed++;
 
 
     saveLS("triviaLog", tl);
