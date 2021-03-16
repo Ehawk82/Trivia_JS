@@ -102,12 +102,10 @@ if(stuffs[tl.current_question]){
     box.append("done! ",nxtBtn);
     tl.completed++;
     tl.current_question = 0;
-    
+    scoreTracker.innerHTML = "SCORE TRACKER: ";
+    scoreTracker.append(passes,fails,completions,average);  
     saveLS("triviaLog",tl);
   }
-
-  scoreTracker.innerHTML = "SCORE TRACKER: ";
-  scoreTracker.append(passes,fails,completions,average);
 
   container.append(box,scoreTracker);
 
