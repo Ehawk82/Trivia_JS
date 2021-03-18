@@ -1,0 +1,18 @@
+/*DOM*/
+body {
+	margin: 0;
+	padding: 0;
+}
+body div div {
+	padding: 10px;
+}
+body div div span {
+	box-shadow: 0 0 2px inset black;
+
+	padding:5px 15px;
+}
+/*ID*/
+/*CLASS*/
+/*MULTI*/
+/*OTHER*/
+

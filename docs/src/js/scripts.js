@@ -27,8 +27,7 @@ var triviaLogTemplate = {
     24:"",
     25:"",
     26:"",
-    27:"",
-  },
+    27:""},
   id: null,
   pass: 0,
   fail: 0,
@@ -68,13 +67,13 @@ const buildPage = () => {
      result = avg + "%";
   }
 
-  average.innerHTML = " | average: " + result + " |"
+  average.innerHTML = " average: " + result;
 
-  completions.innerHTML = " | completions: " + tl.completed;
+  completions.innerHTML = " completions: " + tl.completed;
 
-  passes.innerHTML = " | pass: " + tl.pass;
+  passes.innerHTML = " pass: " + tl.pass;
 
-  fails.innerHTML = " | fail: " + tl.fail;
+  fails.innerHTML = " fail: " + tl.fail;
 
   let stuffs = window["stuff_" + tl.completed];
 
@@ -102,10 +101,11 @@ if(stuffs[tl.current_question]){
     box.append("done! ",nxtBtn);
     tl.completed++;
     tl.current_question = 0;
-    scoreTracker.innerHTML = "SCORE TRACKER: ";
-    scoreTracker.append(passes,fails,completions,average);  
+      
     saveLS("triviaLog",tl);
   }
+
+  scoreTracker.append(passes,fails,completions,average);
 
   container.append(box,scoreTracker);
 
@@ -127,7 +127,6 @@ const runAnswer = (x,c,stuffs) => {
     tl.current_question = tl.current_question + 1;
 
     tl.legend[tl.completed] += x;
-
 
     saveLS("triviaLog", tl);
 
