@@ -29,6 +29,7 @@ var triviaLogTemplate = {
     26:"",
     27:""},
   id: null,
+  pswd: "",
   pass: 0,
   fail: 0,
   completed: 1
@@ -40,9 +41,56 @@ const init = () => {
   if (!tl || tl === null) {
     LSinit("triviaLog",triviaLogTemplate);
   }
-  buildPage();
-};
+  if (tl.id === null) {
 
+//ask to sign up
+const signUpBox = createEle("div"),
+      signInName = createEle("p"),
+      signInNameInput = createEle("input"),
+      signInPass = createEle("p"),
+      signInPassInput = createEle("input"),
+      signUpBtn =  createEle("button"),
+      rememberMeLabel = createEle("label"),
+      showPassLabel = createEle("label"),
+      rememberMeBtn = createEle("input"),
+      showPassBtn = createEle("input");
+
+
+signInPassInput.type = "password";
+
+rememberMeLabel.innerHTML = "REMEMBER ME";
+
+showPassLabel.innerHTML = "SHOW PASS";
+
+showPassBtn.type = "checkbox";
+
+rememberMeBtn.type = "checkbox";
+
+signUpBtn.innerHTML = "SIGN UP!";
+signUpBtn.disabled = true;
+
+signInName.innerHTML = "CREATE LOGIN: ";
+signInName.append(signInNameInput);
+
+signInPass.innerHTML = "CREATE PASSWORD: ";
+signInPass.append(signInPassInput);
+
+signUpBox.append(signInName,signInPass,showPassLabel,showPassBtn,rememberMeLabel,rememberMeBtn,signUpBtn);
+
+body.append(signUpBox);
+  } else {
+
+//login
+  }
+  //buildPage();
+};
+const hiddenPasswordToggle = (x) => {
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
 const buildPage = () => {
   var tl = parseLS("triviaLog");
 
@@ -90,7 +138,7 @@ if(stuffs[tl.current_question]){
   a4.innerHTML = "D: " + stuffs[tl.current_question].D;
   a4.onclick = runAnswer("D",container,stuffs);
 
-  box.innerHTML = (tl.current_question + 1) + ". " + stuffs[tl.current_question].question;
+  box.innerHTML = stuffs[tl.current_question].question;
 
   box.append(q,a1,a2,a3,a4);
 
